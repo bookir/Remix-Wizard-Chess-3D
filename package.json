@@ -10,7 +10,8 @@
     "build": "vite build",
     "prelint": "[ -d node_modules/.bin ] || bun install || npm install",
     "lint": "tsc --noEmit",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "deploy": "npm run build && scp -r dist/* root@book-vpn.softether.net:/web/wizard-chess/"
   },
   "dependencies": {
     "@google/genai": "^2.4.0",
